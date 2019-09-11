@@ -16,4 +16,4 @@ elif lastdigit == 0:
 elif lastdigit < 6 and lastdigit != 0:
     print(' and is less than 6 and not 0')
 else:
-    print('')
+    print()
