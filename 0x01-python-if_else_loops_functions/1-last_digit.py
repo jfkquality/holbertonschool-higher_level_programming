@@ -5,7 +5,8 @@ number =  random.randint(-10000, 10000)
 lastdigit = (number % 10)
 
 if number < 0:
-    lastdigit = -(number % 10)
+    makepos = abs(number)
+    lastdigit = -(makepos % 10)
 
 print('Last digit of {:d} is {:d}'.format(number, lastdigit), end='')
 if lastdigit > 5:
