@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# If the reverse of a num is less than the num, it's a dup; don't print it.
+# If the reverse of a num <= num, it's a dup; don't print it.
 # Reverse a number buy mod 10 times 10 plus quotient of divide by 10
 
 for i in range(0, 89):
