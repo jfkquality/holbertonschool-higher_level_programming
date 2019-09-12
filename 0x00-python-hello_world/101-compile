@@ -1,7 +1,5 @@
-#!/usr/bin/python3
+#!/bin/bash
 
-import py_compile
-import os
+python 101-compile.py
 
-py_compile.compile(os.environ['PYFILE'])
-os.environ['PYFILEc']='main.pyc'
+PYFILEc=101-compile.pyc
