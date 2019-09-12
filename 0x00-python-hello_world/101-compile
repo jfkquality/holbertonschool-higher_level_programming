@@ -1,5 +1,6 @@
 #!/bin/bash
 
 python 101-compile.py
-export PYFILEc=101-compile.pyc
+export PYFILEc=main.pyc
+
 # PYFILEc=101-compile.pyc
