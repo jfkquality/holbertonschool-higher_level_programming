@@ -2,6 +2,7 @@
 
 import py_compile
 import os
+import PYFILE
 
-py_compile.compile(os.environ['PYFILE'])
-os.environ['PYFILEc']='main.pyc'
+# py_compile.compile(os.environ['PYFILE'])
+# os.environ['PYFILEc']='jfk.pyc'

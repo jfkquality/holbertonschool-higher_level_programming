@@ -21,6 +21,12 @@ size_t print_listint(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
 void free_listint(listint_t *head);
 int check_cycle(listint_t *list);
-def magic_calculation(a, b)
 
+def islower(c)
+def uppercase(str)
+def print_last_digit(number)
+def add(a, b)
+def pow(a, b)
+def fizzbuzz()
+def remove_char_at(str, n)
 #endif
