@@ -29,4 +29,8 @@ def add(a, b)
 def pow(a, b)
 def fizzbuzz()
 def remove_char_at(str, n)
+def sub(a, b)
+def mul(a, b)
+def div(a, b)
+
 #endif
