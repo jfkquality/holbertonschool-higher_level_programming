@@ -10,6 +10,6 @@ def add(a, b):
     Returns:
         The return value. a + b
     """
-        return (a + b)
+    return (a + b)
 
     if __name__ == "__main__":
