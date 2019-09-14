@@ -9,8 +9,8 @@ if __name__ == "__main__":
     else:
         print("{:d} arguments:".format(argslen-1))
 
-        if argslen > 1:
-            for i, arg in enumerate(sys.argv):
-                if i == 0:
-                    continue
-                print("{:d}: {}".format(i, arg))
+    if argslen > 1:
+        for i, arg in enumerate(sys.argv):
+            if i == 0:
+                continue
+            print("{:d}: {}".format(i, arg))
