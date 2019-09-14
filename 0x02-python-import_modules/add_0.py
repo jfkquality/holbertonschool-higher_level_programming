@@ -10,5 +10,5 @@ def add(a, b):
         The return value. a + b
     """
 
-    if __name__ == "__main_
-    return (a + b)
+    if __name__ == "__main_":
+        return (a + b)
