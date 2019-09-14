@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def add(a, b):
-if __name__ == "__main__":
 
     """My addition function
 
@@ -11,5 +10,5 @@ if __name__ == "__main__":
     Returns:
         The return value. a + b
     """
-
-    return (a + b)
+    if __name__ == "__main__":
+        return (a + b)
