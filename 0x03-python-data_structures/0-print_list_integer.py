@@ -2,7 +2,6 @@
 
 
 def print_list_integer(my_list=[]):
-
     """My print list function
 
     Args:
@@ -12,5 +11,5 @@ def print_list_integer(my_list=[]):
         Nothing.
     """
 
-    for item in my_list:
-        print('{}'.format(my_list[item - 1]))
+    for item in range(len(my_list)):
+        print('{}'.format(my_list[item]))
