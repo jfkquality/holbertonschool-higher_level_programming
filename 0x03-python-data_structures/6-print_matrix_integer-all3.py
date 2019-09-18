@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    print('\n'.join([''.join(['{:2d}'.format(item) for item in row])
-                     for row in matrix]))
+    # print('\n'.join([''.join(['{:2d}'.format(item) for item in row])
+    #                  for row in matrix]))
 
     # for i in range(len(matrix)):
     #     for j in range(len(matrix[i])):
-    #         print('{:2d}'.format(matrix[i][j]), end=''),
+    #         print('{:d}'.format(matrix[i][j]), end=' ' if j < len(matrix[i]))
     #     print()
 
-    # for row in matrix:
-    #     for val in row:
-    #         print ('{:2d}'.format(val), end='')
-    #     print()
+    for row in matrix:
+        for val in row:
+            print ('{:d}'.format(val),
+                end='' if j < len(matrix[i]) - 1) else ' ')
+        print()

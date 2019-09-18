@@ -8,7 +8,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
                 tuple_a = tuple_lista
     if len(tuple_b) < 2:
         for b in (tuple_b):
-            if !tuple[b]:
+            if tuple[b] == None:
                 tuple_listb = list(tuple_b)
                 tuple_listb[b] = 0
                 tuple_b = tuple_listb
