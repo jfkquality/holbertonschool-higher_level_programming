@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if len(tuple_a) < 2:
-        for a in (tuple_a):
-            if not all (tuple_a):
-                tuple_lista = list(tuple_a)
-                tuple_lista[a] = 0
-                tuple_a = tuple_lista
-    if len(tuple_b) < 2:
-        for b in (tuple_b):
-            if tuple[b] == None:
-                tuple_listb = list(tuple_b)
-                tuple_listb[b] = 0
-                tuple_b = tuple_listb
+    tuplista = list(tuple_a)
+    tuplistb = list(tuple_b)
+    newlist = []
+    if len(tuplista) < 2:
+        if len(tuplista) == 0:
+            tuplista.append(0)
+        tuplista.append(0)
+    if len(tuplistb) < 2:
+        if len(tuplistb) == 0:
+            tuplistb.append(0)
+        tuplistb.append(0)
 
-    for val in range(0:2):
-        newtuple[val] = tup;e_a[val] + tuple_b[val]
+    for val in range(0, 2):
+        newlist.append(tuplista[val] + tuplistb[val])
+    newtuple = tuple(newlist)
 
     # tuple(map(lambda x, y: x + y, tuple_a, tuple_b))
 
