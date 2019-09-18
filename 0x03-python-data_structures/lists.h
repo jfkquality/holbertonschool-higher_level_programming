@@ -43,5 +43,6 @@ def print_matrix_integer(matrix=[[]])
 def add_tuple(tuple_a=(), tuple_b=())
 def max_integer(my_list=[])
 def divisible_by_2(my_list=[])
+def delete_at(my_list=[], idx=0)
 
 #endif
