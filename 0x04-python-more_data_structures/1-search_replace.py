@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    # newlist = list(map(list, my_list))
     newlist = []
     for i, val in enumerate(my_list):
             if val == search:
