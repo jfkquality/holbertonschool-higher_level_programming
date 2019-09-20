@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-def only_diff_elements(set1, set2):
-    return set1.intersection(set2)
+def only_diff_elements(s1, s2):
+    # return set1.union(set2)
+    same1 = s1-s2
+    same2 = s2-s1
+    same3 = same1 | same2
+    return same3
