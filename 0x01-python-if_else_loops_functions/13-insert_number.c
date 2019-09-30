@@ -5,16 +5,15 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *current = *head;
-	listint_t *new;
+	listint_t *current = *head, *new;
 
-        new = malloc(sizeof(listint_t));
-        if (new == NULL)
-        {
-                printf("Error\n");
-                return (NULL);
-        }
-        new->n = number;
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+	{
+		printf("Error\n");
+		return (NULL);
+	}
+	new->n = number;
 	new->next = NULL;
 	if (current == NULL)
 	{
