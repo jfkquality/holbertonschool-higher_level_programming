@@ -6,5 +6,6 @@ def safe_print_list(mylist=[], x=0):
                 print()
                 i += 1
         except:
+                print()
                 pass
         return i
