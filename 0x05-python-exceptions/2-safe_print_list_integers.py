@@ -9,8 +9,5 @@ def safe_print_list_integers(mylist=[], x=0):
                         pass
                 except TypeError:
                         pass
-               # except:
-               #         print("list index out of RANGE")
-               #         pass
         print()
         return y
