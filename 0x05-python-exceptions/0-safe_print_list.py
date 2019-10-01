@@ -4,10 +4,7 @@ def safe_print_list(mylist=[], x=0):
                 for i in range(x):
                         print(mylist[i], end='')
                 print()
-                return i + 1
-        except IndexError:
-                print()
-                return i
+                i += 1
         except:
-                # print()
-                return i
+                pass
+        return i
