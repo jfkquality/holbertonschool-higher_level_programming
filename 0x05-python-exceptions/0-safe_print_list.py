@@ -9,5 +9,5 @@ def safe_print_list(mylist=[], x=0):
                 print()
                 return i
         except:
-                print()
+                # print()
                 return i
