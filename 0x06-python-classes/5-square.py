@@ -30,8 +30,6 @@ class Square:
             print()
         else:
             for row in range(self.__size):
-                for col in range(self.__size):
-                    print("#", end='')
-                print()
+                print("#" * self.__size)
 
     size = property(get_size, set_size)
