@@ -24,7 +24,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = (size)
 
-
     def my_print(self):
         """ Print a square of size x size '#'s """
         if self.__size == 0:
