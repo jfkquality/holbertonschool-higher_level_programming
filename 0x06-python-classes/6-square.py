@@ -28,6 +28,14 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = (size)
 
+    def get_position(self):
+        """ Get private position tuple variable """
+        return self.__position
+
+    def set_position(self, value):
+        """ Set private position tuple variable """
+        self.__position = position(value)
+
     def my_print(self):
         """ Print a square of size x size '#'s """
         if self.__size == 0:
@@ -39,3 +47,4 @@ class Square:
                 print()
 
     size = property(get_size, set_size)
+    position = property(get_position, set_position)
