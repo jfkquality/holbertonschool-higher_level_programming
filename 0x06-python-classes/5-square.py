@@ -24,17 +24,14 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = (size)
 
+
     def my_print(self):
         """ Print a square of size x size '#'s """
         if self.__size == 0:
             print()
         else:
-            if not isinstance(self.__size, int):
-                raise TypeError("size must be an integer")
-            if (self.__size < 0):
-                raise ValueError("size must be >= 0")
-            for (x in range(self.__size)):
-                for (y in range(self.__size)):
+            for row in range(self.__size):
+                for col in range(self.__size):
                     print("#", end='')
                 print()
 
