@@ -41,13 +41,14 @@ class Square:
 
     def my_print(self):
         """ Print a square of size x size '#'s """
-        if self.__size == 0:
+        # if self.__size == 0:
+        #     print()
+        # else:
+        print("\n" * self.__position[1], end='')
+        for row in range(self.__size):
+            print(" " * self.__position[0], end='')
+            print("#" * self.__size, end='')
             print()
-        else:
-            for row in range(self.__size):
-                print(" " * self.__position[0], end='')
-                print("#" * self.__size, end='')
-                print()
 
     size = property(get_size, set_size)
     position = property(get_position, set_position)
