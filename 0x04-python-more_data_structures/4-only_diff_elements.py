@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def only_diff_elements(s1, s2):
-    # return set1.union(set2)
-    same1 = s1-s2
-    same2 = s2-s1
-    same3 = same1 | same2
-    return same3
+    return s1 ^ s2
+
+    # return s1.symmetric_difference(s2)
+
+    # same1 = s1-s2
+    # same2 = s2-s1
+    # same3 = same1 | same2
+    # return same3
