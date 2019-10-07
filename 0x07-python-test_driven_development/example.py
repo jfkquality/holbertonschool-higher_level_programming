@@ -49,6 +49,6 @@ def factorial(n):
     return result
 
 
-# if __name__ == "__main__":
-#     import doctest
-#     doctest.testfile("tests/example.txt")
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/example.txt")

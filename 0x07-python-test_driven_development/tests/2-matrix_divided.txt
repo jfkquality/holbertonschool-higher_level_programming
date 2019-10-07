@@ -1,0 +1,57 @@
+>>> divgrid = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+All elements of the matrix should be divided by div,
+rounded to 2 decimal places
+
+Returns a new matrix (how to test?)
+
+Happy path:
+>>> divgrid(matrix, 1)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+
+Divide by 2
+>>> divgrid(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+Divide by 3
+>>> divgrid(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+
+matrix must be a list of lists of integers or floats,
+otherwise raise a TypeError exception with the message,
+matrix must be a matrix (list of lists) of integers/floats.
+
+>>> badchars = [[1, 2, 3], [4, 'a', 6]]
+
+>>> divgrid(badchars, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Each row of the matrix must be of the same size,
+otherwise raise a TypeError exception with the message,
+Each row of the matrix must have the same size
+>>> wrongsize = [[1, 2, 3], [4, 5, 6, 7]]
+>>> divgrid(wrongsize, 1)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+
+div must be a number (integer or float),
+otherwise raise a TypeError exception with the message,
+div must be a number
+>>> divgrid(matrix, 'a')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+
+div can’t be equal to 0,
+otherwise raise a ZeroDivisionError exception with the message,
+division by zero
+>>> divgrid(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
