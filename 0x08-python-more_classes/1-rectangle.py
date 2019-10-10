@@ -14,6 +14,7 @@ class Rectangle:
         """ Get private width variable """
         return self.__width
 
+    @width.setter
     def width(self, width):
         """ Set private width variable """
         if not isinstance(width, int):
@@ -27,6 +28,7 @@ class Rectangle:
         """ Get private height variable """
         return self.__height
 
+    @height.setter
     def height(self, height):
         """ Set private height variable """
         if not isinstance(height, int):
