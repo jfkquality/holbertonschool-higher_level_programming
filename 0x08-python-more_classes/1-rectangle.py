@@ -44,6 +44,3 @@ class Rectangle:
         else:
             for row in range(self.__size):
                 print("#" * self.__size)
-
-    width = property(width, width)
-    height = property(height, height)
