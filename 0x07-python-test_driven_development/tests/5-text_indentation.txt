@@ -46,3 +46,13 @@ text must be a string
 >>> text_indentation(12)
 Traceback (most recent call last):
 TypeError: text must be a string
+
+>>> text_indentation("""Holberton. School? How are you: John""”)
+Holberton.
+School?
+How are you:
+John
+
+>>> test_indentation(""“Holberton.School""")
+Holberton.
+School

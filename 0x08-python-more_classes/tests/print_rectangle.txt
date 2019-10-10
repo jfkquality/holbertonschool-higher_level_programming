@@ -1,0 +1,105 @@
+>>> print_rectangle = __import__('1-rectangle').Rectangle
+
+Write a function that prints a rectangle with the character #.
+
+Prototype: def print_rectangle(witdth, height):
+width is the width of the recangle
+height is the height of the rectangle
+
+Happy path:
+
+>>> print_rectangle(4, 4)
+####
+####
+####
+####
+
+
+>>> print_rectangle(10, 10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_rectangle(1, 1)
+#
+
+width must be an integer
+otherwise raise a TypeError exception with the message
+width must be an integer
+
+if width is a float and is less than 0
+raise a TypeError exception with the message
+width must be an integer
+
+>>> print_rectangle("")
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> print_rectangle(3.0)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> print_rectangle(3.5)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> print_rectangle(-2.0)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> print_recangle(-3.34)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+if width is less than 0
+raise a ValueError exception with the message
+width must be >= 0
+
+>>> print_rectangle(0)
+
+>>> print_rectangle(-1)
+Traceback (most recent call last):
+ValueError: width must be >= 0
+
+height must be an integer
+otherwise raise a TypeError exception with the message
+width must be an integer
+
+if height is a float and is less than 0
+raise a TypeError exception with the message
+width must be an integer
+>>> print_rectangle(, "")
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> print_rectangle(, 3.0)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> print_rectangle(, 3.5)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> print_rectangle(, -2.0)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> print_recangle(, -3.34)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+if height is less than 0
+raise a ValueError exception with the message
+width must be >= 0
+>>> print_rectangle(, 0)
+
+>>> print_rectangle(, -1)
+Traceback (most recent call last):
+ValueError: height must be >= 0

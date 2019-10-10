@@ -1,0 +1,11 @@
+>>> Rectangle = __import__('0-rectangle').Rectangle
+
+Write an empty class Rectangle that defines a rectangle:
+
+>>> my_rectangle = Rectangle()
+
+>>> print(type(my_rectangle))
+<class '0-rectangle.Rectangle'>
+
+>>> print(my_rectangle.__dict__)
+{}
