@@ -9,7 +9,7 @@ class Rectangle:
         """ Calculate area of the rectangle"""
         return (self.__width * self.__height)
 
-    # @property
+    @property
     def width(self):
         """ Get private width variable """
         return self.__width
@@ -23,7 +23,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = (width)
 
-    # @property
+    @property
     def height(self):
         """ Get private height variable """
         return self.__height
