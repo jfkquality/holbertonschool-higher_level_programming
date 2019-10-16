@@ -1,33 +1,34 @@
 #!/usr/bin/python3
-class BaseGeometry():
-    """ Base Geometry class """
-    def __init__(self):
-        """ Init method """
-        pass
-    def area(self):
-        """ area method """
-        raise Exception("area() is not implemented")
-    def integer_validator(self, name, value):
-        """ Integer validator method """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+# class BaseGeometry():
+#     """Base Geometry class"""
+#     def __init__(self):
+#         """ Init method """
+#         pass
 
+#     def area(self):
+#         """ area method """
+#         raise Exception("area() is not implemented")
+
+#     def integer_validator(self, name, value):
+#         """ Integer validator method """
+#         if type(value) is not int:
+#             raise TypeError("{} must be an integer".format(name))
+#         if value <= 0:
+#             raise ValueError("{} must be greater than 0".format(name))
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
-    """ A rectangle object. """
+    """A rectangle sublcass of BaseGeometry."""
     def __init__(self, width, height):
-        self.__width = Rectangle.integer_validator(self, "width", width)
-        self.__height = Rectangle.integer_validator(self, "height", height)
-
+        Rectangle.integer_validator(self, "width", width)
+        self.__width = width
+        Rectangle.integer_validator(self, "height", height)
+        self.__height = height
 
     def __str__(self):
-        """ Print a recangle of width x height '#'s """
-        # if self.__width == 0 or self.__height == 0:
-        #     return None
-        # else:
-        #     for row in range(self.__height):
-        return ("ehllo")
+        """ Print class name, dimensions """
+        return ("[{}] {}/{}".format((self.__class__.__name__),
+                self.__width, self.__height))
 
     def area(self):
         """ Calculate area of the rectangle"""
