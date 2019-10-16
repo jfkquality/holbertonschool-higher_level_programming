@@ -17,6 +17,8 @@
 #             raise ValueError("{} must be greater than 0".format(name))
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 class Rectangle(BaseGeometry):
     """A rectangle sublcass of BaseGeometry."""
     def __init__(self, width, height):
