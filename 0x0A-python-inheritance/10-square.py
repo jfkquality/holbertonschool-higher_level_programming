@@ -9,4 +9,7 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__size = size
 
-# No need to repeat methods; they're inherited from super.__init__..
+    def __str__(self):
+        """ Print super class name, dimensions """
+        return ("[{}] {}/{}".format(Rectangle.__name__,
+                                    self.__size, self.__size))

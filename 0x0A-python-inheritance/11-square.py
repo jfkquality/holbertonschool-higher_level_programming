@@ -8,6 +8,3 @@ class Square(Rectangle):
     def __init__(self, size):
         super().__init__(size, size)
         self.__size = size
-
-# All methods from super/parent are inherited so no need to code here
-# Add own __str__ method for correct output
