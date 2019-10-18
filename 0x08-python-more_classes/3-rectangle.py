@@ -8,11 +8,17 @@ class Rectangle:
     def __str__(self):
         """ Print a recangle of width x height '#'s """
         if self.__width == 0 or self.__height == 0:
-            return None
+            return ""
         rect = []
         for row in range(self.__height):
             rect.append("#" * self.__width)
         return "\n".join(rect)
+
+    def __repr__(self):
+        """ Return repr of  a recangle of width x height '#'s """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return (self)
 
     def area(self):
         """ Calculate area of the rectangle"""

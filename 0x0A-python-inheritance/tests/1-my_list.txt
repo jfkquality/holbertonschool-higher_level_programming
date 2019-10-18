@@ -1,0 +1,38 @@
+>>> MyList = __import__('1-my_list').MyList
+
+
+"""Create new MyList object"""
+>>> my_list = MyList()
+
+
+"""Add element to list"""
+>>> my_list.append(1)
+
+
+"""Add element to list"""
+>>> my_list.append(4)
+
+
+"""Add element to list"""
+>>> my_list.append(2)
+
+
+"""Add element to list"""
+>>> my_list.append(3)
+
+
+"""Add element to list"""
+>>> my_list.append(5)
+
+
+"""Print list"""
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+"""Print sorted list"""
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+"""Print list again; show it didn't change"""
+>>> print(my_list)
+[1, 4, 2, 3, 5]

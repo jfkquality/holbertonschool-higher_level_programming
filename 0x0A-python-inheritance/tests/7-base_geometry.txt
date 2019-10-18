@@ -1,0 +1,35 @@
+"""Import BaseGeometry class"""
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+"""Create new object"""
+>>> bg = BaseGeometry()
+
+
+"""Validate int"""
+>>> bg.integer_validator("my_int", 12)
+
+
+"""Validate width"""
+>>> bg.integer_validator("width", 89)
+
+
+
+"""try validating bad name value"""
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+
+"""try validating bad age value"""
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+
+"""try validating negative distances"""
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
