@@ -5,6 +5,10 @@
 >>> my_list = MyList()
 
 
+"""Test empty list"""
+>>> my_list.print_sorted()
+[]
+
 """Add element to list"""
 >>> my_list.append(1)
 
