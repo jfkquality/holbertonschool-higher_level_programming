@@ -10,5 +10,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Print super class name, dimensions """
-        return ("[{}] {}/{}".format(Rectangle.__name__,
-                self.__size, self.__size))
+        return ("[{}] {}/{}".format(Rectangle.__name__, self.__size, self.__size))
