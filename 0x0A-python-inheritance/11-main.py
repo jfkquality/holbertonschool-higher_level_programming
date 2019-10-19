@@ -12,7 +12,7 @@ print(s.area())
 
 # s = Square([12, 52])
 
-# s = Square(-35)
+s = Square(-35)
 
 # s = Square(0)
 
