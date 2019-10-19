@@ -24,15 +24,24 @@
 """Add element to list"""
 >>> my_list.append(5)
 
+"""Add element to list"""
+>>> my_list.append(-6)
+
+
+"""Add element to list"""
+>>> my_list.append()
+Traceback (most recent call last):
+TypeError: append() takes exactly one argument (0 given)
+
 
 """Print list"""
 >>> print(my_list)
-[1, 4, 2, 3, 5]
+[1, 4, 2, 3, 5, -6]
 
 """Print sorted list"""
 >>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+[-6, 1, 2, 3, 4, 5]
 
 """Print list again; show it didn't change"""
 >>> print(my_list)
-[1, 4, 2, 3, 5]
+[1, 4, 2, 3, 5, -6]
