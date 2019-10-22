@@ -2,15 +2,8 @@
 import unittest
 from models.base import Base
 
-# private class attribute __nb_objects = 0
-# class constructor: def __init__(self, id=None)::
-
-# private class attribute __nb_objects = 0
-# class constructor: def __init__(self, id=None)::
-
 
 class TestBase(unittest.TestCase):
-
     """
     Test Base()
     if id is not None, assign the public instance attribute id with this
@@ -19,6 +12,7 @@ class TestBase(unittest.TestCase):
     """
 
     def setUp(self):
+        """ setup method """
         Base._clear_inits()
 
     def test_bad_id(self):
@@ -40,6 +34,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b2.id, 2)
 
     def test_id_set(self):
+        """Test id is set"""
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
