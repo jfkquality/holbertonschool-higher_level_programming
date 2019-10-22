@@ -2,11 +2,13 @@
 
 
 class Base:
-""" Base class """
+""" Base class
+"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ init method """
+        """ init method
+        """
         if id is not None:
             self.id = id
         else:
@@ -15,7 +17,8 @@ class Base:
 
     # @staticmethod
     def int_checker(self, name, value, comparer=""):
-        """ Unused int checker """
+        """ Unused int checker
+        """
         # print(name, value, comparer, type(value))
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
@@ -29,7 +32,8 @@ class Base:
 
     @classmethod
     def _clear_inits(cls):
-        """ clear nb objects """
+        """ clear nb objects
+        """
         # for testing only, hook to clear the class-level cache.
         # print("****", cls, "*****")
         cls.__nb_objects = 0
@@ -37,13 +41,15 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ convert to jsaon string """
+        """ convert to jsaon string
+        """
         import json
         return (json.dumps(list_dictionaries))
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Save to file """
+        """ Save to file
+        """
         import json
         # filename = self.__class__.__name__ + ".json"
         filename = "file.json"
