@@ -22,3 +22,10 @@ class Base:
         if comparer == 'le':
             if value <= 0:
                 raise ValueError("{} must be > than 0".format(name))
+
+    @classmethod
+    def _clear_inits(cls):
+        # for testing only, hook to clear the class-level cache.
+        # print("****", cls, "*****")
+        cls.__nb_objects = 0
+        # cls.__nb_objects.clear

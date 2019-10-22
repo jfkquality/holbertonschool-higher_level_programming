@@ -87,3 +87,31 @@ class Rectangle(Base):
         """ Print class name, dimensions """
         return ("[{}] ({}) {}/{} - {}/{}".format((self.__class__.__name__),
                 self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        if len(args) > 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+
+    def to_dictionary(self):
+        d = {}
+        d["id"] = self.id
+        d["width"] = self.width
+        d["height"] = self.height
+        d["x"] = self.x
+        d["y"] = self.y
+        return d
