@@ -78,12 +78,3 @@ class Base:
                 # print(lststr)
                 # for obj in list_objs:
                 # json.dump(obj, myfile)
-
-        # for obj in list_objs:
-            # print(obj)
-            # print(json.dumps(obj))
-            # print(list_str)
-            # print(type(list_str))
-            # print(json.loads(list_str))
-
-        # return (json.loads(list_objs))

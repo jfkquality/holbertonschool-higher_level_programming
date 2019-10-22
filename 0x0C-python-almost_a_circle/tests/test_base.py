@@ -7,9 +7,6 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """
     Test Base()
-    if id is not None, assign the public instance attribute id with this
-    argument's value - you can assume id is an integer
-    and you don’t need to test the type of it
     """
 
     def setUp(self):
@@ -45,11 +42,5 @@ class TestBase(unittest.TestCase):
         b3 = Base()
         self.assertEqual(b3.id, 2)
 
-        """ otherwise, increment __nb_objects and assign the new value
-         to the public instance attribute id """
-
-        if __name__ == '__main__':
-            unittest.main()
-
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
