@@ -55,13 +55,19 @@ class Base:
         """ Save to file
         """
         import json
+
+        emptylist = []
         filename = cls.__name__ + ".json"
-        # filename = "file.json"
-        # print(list_objs)
-        dictlist = []
-        for i, obj in enumerate(list_objs):
-            dictlist.append(vars(obj))
-        with open(filename, mode='w', encoding="utf-8") as myfile:
-            filestring = (Base.to_json_string(dictlist))
-            filestring = (filestring.replace('_Rectangle__', ''))
-            myfile.write(filestring)
+
+        if not list_objs:
+            with open(filename, mode='w', encoding="utf-8") as myfile:
+                emptylist = (Base.to_json_string(emptylist))
+                myfile.write(emptylist)
+        else:
+            dictlist = []
+            for i, obj in enumerate(list_objs):
+                dictlist.append(vars(obj))
+                with open(filename, mode='w', encoding="utf-8") as myfile:
+                    filestring = (Base.to_json_string(dictlist))
+                    filestring = (filestring.replace('_Rectangle__', ''))
+                    myfile.write(filestring)
