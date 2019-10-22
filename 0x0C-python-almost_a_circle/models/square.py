@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Square subclass of Rectangle"""
 from models.rectangle import Rectangle
 
 
