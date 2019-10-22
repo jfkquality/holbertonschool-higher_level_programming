@@ -8,5 +8,13 @@ if __name__ == "__main__":
     r2 = Rectangle(2, 4)
     Rectangle.save_to_file([r1, r2])
 
-    with open("Rectangle.json", "r") as file:
-        print(file.read())
+    with open("Rectangle.json", "r") as f:
+        print(f.read())
+
+        # newfile = (f.read().split("_Rectangle__"))
+        # print(f.read().split("_Rectangle__"))
+        # print(newfile)
+        # for key in newfile:
+        #     print(key)
+        # newfile = f.read().replace('_Rectangle__', '')
+        # print(newfile)

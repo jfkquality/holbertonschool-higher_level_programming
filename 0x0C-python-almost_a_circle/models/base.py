@@ -62,25 +62,6 @@ class Base:
         for i, obj in enumerate(list_objs):
             dictlist.append(vars(obj))
         with open(filename, mode='w', encoding="utf-8") as myfile:
-            myfile.write(Base.to_json_string(dictlist))
-            # print(obj.__dict__.keys())
-            # print(vars(obj))
-            # print(vars(obj))
-            # print(val)
-
-            # with open(filename, mode='w', encoding="utf-8") as myfile:
-            # for obj in list_objs:
-            #     if isinstance(obj, date):
-            #         serial = obj.isoformat()
-            #         return serial
-
-                # return obj.__dict__
-                # for i, attr in vars(obj):
-                #     print(attr)
-                # lststr = cls.to_json_string(obj)
-                # lststr = (cls.to_json_string((obj)))
-                # print(json.JSONEncoder.default(cls, lststr))
-                # lstdict = cls.to_dictionary()
-                # print(lststr)
-                # for obj in list_objs:
-                # json.dump(obj, myfile)
+            filestring = (Base.to_json_string(dictlist))
+            filestring = (filestring.replace('_Rectangle__', ''))
+            myfile.write(filestring)
