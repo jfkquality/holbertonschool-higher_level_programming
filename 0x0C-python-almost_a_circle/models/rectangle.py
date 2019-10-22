@@ -92,6 +92,7 @@ class Rectangle(Base):
                 self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
+        """ Update attributes """
         if len(args) > 0:
             for i, arg in enumerate(args):
                 if i == 0:
@@ -110,6 +111,7 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ Translate attributes to dict """
         d = {}
         d["id"] = self.id
         d["width"] = self.width
