@@ -14,7 +14,7 @@ class Base:
     def int_checker(self, name, value, comparer=""):
         # print(name, value, comparer, type(value))
         if type(value) is not int:
-             raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(name))
         # print(comparer)
         if comparer == 'lt':
             if value < 0:
@@ -47,10 +47,15 @@ class Base:
             # print(vars(obj))
             # print(val)
 
-        # with open(filename, mode='w', encoding="utf-8") as myfile:
+            # with open(filename, mode='w', encoding="utf-8") as myfile:
             for obj in list_objs:
-                for i, attr in vars(obj):
-                    print(attr)
+                if isinstance(obj, date):
+                    serial = obj.isoformat()
+                    return serial
+
+                return obj.__dict__
+                # for i, attr in vars(obj):
+                #     print(attr)
                 # lststr = cls.to_json_string(obj)
                 # lststr = (cls.to_json_string((obj)))
                 # print(json.JSONEncoder.default(cls, lststr))
@@ -58,7 +63,6 @@ class Base:
                 # print(lststr)
                 # for obj in list_objs:
                 # json.dump(obj, myfile)
-
 
         # for obj in list_objs:
             # print(obj)

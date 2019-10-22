@@ -12,12 +12,11 @@ class Square(Rectangle):
         self.x = x
         self.y = y
 
-
     def __str__(self):
         """ Print super class name, dimensions """
-        # print(self.x, self.y, self.size, self.id)
-        return ("[{}] ({}) {}/{} - {}".format((self.__class__.__name__),
-                                self.id, self.x, self.y, self.size))
+        return ("[{}] ({}) {}/{} - {}".
+                format((self.__class__.__name__),
+                       self.id, self.x, self.y, self.size))
 
     @property
     def size(self):

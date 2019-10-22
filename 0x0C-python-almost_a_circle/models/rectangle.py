@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from models.base import Base
 
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -105,7 +106,6 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-
 
     def to_dictionary(self):
         d = {}

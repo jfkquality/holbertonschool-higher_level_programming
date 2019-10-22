@@ -48,7 +48,6 @@ class TestRectangle(unittest.TestCase):
         r4 = Rectangle(10, 2, 0, 1)
         self.assertEqual(r4.id, 4)
 
-
     def test_id_set(self):
         """ Test id set """
         r1 = Rectangle(10, 2)
@@ -101,7 +100,6 @@ class TestRectangle(unittest.TestCase):
     def test_width(self):
         self.assertEqual(Rectangle(10, 3).width, 10)
 
-
     def test_area(self):
         r1 = Rectangle(1, 2, 5, 4)
         self.assertEqual(r1.area(), 2)
@@ -111,7 +109,6 @@ class TestRectangle(unittest.TestCase):
 
         r1 = Rectangle(2, 5, 5, 4)
         self.assertEqual(r1.area(), 10)
-
 
     # def test_output(self):
     #     from contextlib import redirect_stdout
@@ -125,12 +122,10 @@ class TestRectangle(unittest.TestCase):
     #     s = f.getvalue()
     #     self.assertEqual(s, r1)
 
-
         # ATTEMPT #2
         # import sys
         # from contextlib import contextmanager
         # from io import StringIO
-
 
         # @contextmanager
         # def captured_output():
@@ -148,7 +143,6 @@ class TestRectangle(unittest.TestCase):
 
         # lines = out.getvalue().splitlines()
         # self.assertIn('xxx', lines)
-
 
 if __name__ == '__main__':
     unittest.main()

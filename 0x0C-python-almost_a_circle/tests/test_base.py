@@ -39,7 +39,6 @@ class TestBase(unittest.TestCase):
         b2 = Base()
         self.assertEqual(b2.id, 2)
 
-
     def test_id_set(self):
         b1 = Base()
         self.assertEqual(b1.id, 1)
