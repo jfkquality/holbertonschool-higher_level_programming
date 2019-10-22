@@ -46,7 +46,7 @@ class Base:
         """ convert to jsaon string
         """
         import json
-        if len(list_dictionaries) < 0:
+        if not list_dictionaries:
             return ("[]")
         return (json.dumps(list_dictionaries))
 
