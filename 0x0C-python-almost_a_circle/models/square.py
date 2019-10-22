@@ -41,7 +41,7 @@ class Square(Rectangle):
                 if i == 0:
                     self.id = arg
                 if i == 1:
-                    self.width = arg
+                    self.size = arg
                 if i == 2:
                     self.x = arg
                 if i == 3:
