@@ -34,6 +34,7 @@ class Square(Rectangle):
         self.__height = v
 
     def update(self, *args, **kwargs):
+        """ Update attributes """
         if len(args) > 0:
             for i, arg in enumerate(args):
                 if i == 0:
@@ -50,6 +51,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """Convert attr's to dict"""
         d = {}
         d["id"] = self.id
         d["size"] = self.width
