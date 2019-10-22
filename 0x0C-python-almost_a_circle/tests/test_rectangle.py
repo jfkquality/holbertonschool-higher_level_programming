@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Unittest Rectangle"""
 import unittest
 from models.rectangle import Rectangle
