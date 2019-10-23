@@ -72,6 +72,7 @@ class Base:
                     filestring = (filestring.replace('_Rectangle__', ''))
                     myfile.write(filestring)
 
+    @staticmethod
     def from_json_string(json_string):
         """ returns the list of the JSON string representation """
         import json
@@ -87,3 +88,8 @@ class Base:
         dummy = cls(width=1, height=1, x=0, y=0)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"

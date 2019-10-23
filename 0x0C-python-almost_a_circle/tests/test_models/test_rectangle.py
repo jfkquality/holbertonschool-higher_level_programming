@@ -64,9 +64,6 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(10, 2, 0, 1, 13)
         self.assertEqual(r3.id, 13)
 
-        """ otherwise, increment __nb_objects and assign the new value
-         to the public instance attribute id """
-
     def test_width(self):
         """Test width"""
         # r4 = Rectangle(10, 3)
