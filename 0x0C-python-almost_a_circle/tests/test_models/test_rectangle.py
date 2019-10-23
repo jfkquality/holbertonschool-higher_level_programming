@@ -22,7 +22,7 @@ class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         """Test setup"""
-         # super(Base, self).setUp()
+        # super(Base, self).setUp()
         # _Rectangle._clear_inits()
         Base._clear_inits()
 
@@ -68,8 +68,8 @@ class TestRectangle(unittest.TestCase):
          to the public instance attribute id """
 
     def test_width(self):
-         """Test width"""
-       # r4 = Rectangle(10, 3)
+        """Test width"""
+        # r4 = Rectangle(10, 3)
         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_height(self):
@@ -98,19 +98,19 @@ class TestRectangle(unittest.TestCase):
 
     def test_x(self):
         """Test x coord"""
-         self.assertEqual(Rectangle(10, 3).width, 10)
+        self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_y(self):
-         """Test y coord"""
+        """Test y coord"""
         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_width(self):
         """Test width coord"""
-         self.assertEqual(Rectangle(10, 3).width, 10)
+        self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_area(self):
         """Test area coord"""
-         r1 = Rectangle(1, 2, 5, 4)
+        r1 = Rectangle(1, 2, 5, 4)
         self.assertEqual(r1.area(), 2)
 
         r2 = Rectangle(5, 2, 5, 4)
@@ -132,27 +132,27 @@ class TestRectangle(unittest.TestCase):
     #     s = f.getvalue()
     #     self.assertEqual(s, r1)
 
-        # ATTEMPT #2
-        # import sys
-        # from contextlib import contextmanager
-        # from io import StringIO
+    # ATTEMPT #2
+    # import sys
+    # from contextlib import contextmanager
+    # from io import StringIO
 
-        # @contextmanager
-        # def captured_output():
-        #     new_out, new_err = StringIO(), StringIO()
-        #     old_out, old_err = sys.stdout, sys.stderr
-        #     try:
-        #         sys.stdout, sys.stderr = new_out, new_err
-        #         yield sys.stdout, sys.stderr
-        #     finally:
-        #         sys.stdout, sys.stderr = old_out, old_err
+    # @contextmanager
+    # def captured_output():
+    #     new_out, new_err = StringIO(), StringIO()
+    #     old_out, old_err = sys.stdout, sys.stderr
+    #     try:
+    #         sys.stdout, sys.stderr = new_out, new_err
+    #         yield sys.stdout, sys.stderr
+    #     finally:
+    #         sys.stdout, sys.stderr = old_out, old_err
 
-        # with captured_output() as (out, err):
-        #     r1 = Rectangle(2, 2, 2, 2)
-        #     r1.display()
+    # with captured_output() as (out, err):
+    #     r1 = Rectangle(2, 2, 2, 2)
+    #     r1.display()
 
-        # lines = out.getvalue().splitlines()
-        # self.assertIn('xxx', lines)
+    # lines = out.getvalue().splitlines()
+    # self.assertIn('xxx', lines)
 
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
