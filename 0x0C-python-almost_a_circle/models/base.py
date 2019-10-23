@@ -71,3 +71,12 @@ class Base:
                     filestring = (Base.to_json_string(dictlist))
                     filestring = (filestring.replace('_Rectangle__', ''))
                     myfile.write(filestring)
+
+    def from_json_string(json_string):
+        """ returns the list of the JSON string representation """
+        import json
+
+        if not json_string:
+            return ([])
+        else:
+            return (json.loads(json_string))
