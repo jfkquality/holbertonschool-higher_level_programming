@@ -151,5 +151,104 @@ class TestRectangle(unittest.TestCase):
     # lines = out.getvalue().splitlines()
     # self.assertIn('xxx', lines)
 
+    def test_x2y2_print(self):
+        """ Tests if x2y2 rectangle prints
+        """
+        from io import StringIO
+        import io
+        import contextlib
+        r1 = Rectangle(2, 3, 2, 2)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            r1.display()
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '\n\n  ##\n  ##\n  ##\n')
+
+
+        r1 = Rectangle(10, 10, 10, 10)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (1) 10/10 - 10/10')
+
+        r1.update(89)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 10/10 - 10/10')
+
+        r1.update(89, 2)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 10/10 - 2/10')
+
+        r1.update(89, 2, 3)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 10/10 - 2/3')
+
+        r1.update(89, 2, 3, 4)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 4/10 - 2/3')
+
+        r1.update(89, 2, 3, 4, 5)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 4/5 - 2/3')
+
+        r1 = Rectangle(10, 10, 10, 10)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (1) 10/10 - 10/10')
+
+        r1.update(height=1)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (1) 10/10 - 10/1')
+
+        r1.update(width=1, x=2)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (1) 2/10 - 1/1')
+
+        r1.update(y=1, width=2, x=3, id=89)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 3/1 - 2/1')
+
+        r1.update(x=1, height=2, y=3, width=4)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 3/1 - 2/1')
+
+        r1.update(x=1, height=2, y=3, width=4)
+        temp_stdout = io.StringIO()
+        with contextlib.redirect_stdout(temp_stdout):
+            print(r1)
+        output = temp_stdout.getvalue()
+        self.assertEqual(output, '[Rectangle] (89) 1/3 - 4/2')
+
+
     if __name__ == '__main__':
         unittest.main()
