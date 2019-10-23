@@ -12,10 +12,10 @@ from models.base import Base
 
 
 class TestSquare(unittest.TestCase):
-
     """ Test Square(Rectangle)"""
 
     def setUp(self):
+        """Test setup"""
         # super(Base, self).setUp()
         # _Square._clear_inits()
         Base._clear_inits()
@@ -58,14 +58,13 @@ class TestSquare(unittest.TestCase):
         r3 = Square(10, 2, 0, 1, 13)
         self.assertEqual(r3.id, 13)
 
-        """ otherwise, increment __nb_objects and assign the new value
-         to the public instance attribute id """
-
     def test_width(self):
+        """Test width"""
         # r4 = Square(10, 3)
         self.assertEqual(Square(10, 3).width, 10)
 
     def test_height(self):
+        """Test height"""
         r1 = Square(10, 3)
         self.assertEqual(r1.height, 3)
         self.assertEqual(r1.x, 0)
@@ -73,6 +72,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1.id, 1)
 
     def test_nodimensions(self):
+        """Test no dimensions"""
         with self.assertRaises(ValueError) as jfk:
             Square(0, None, 5, 4)
         self.assertEqual(str(jfk.exception), "width must be > 0")
@@ -88,15 +88,19 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1.id, 3)
 
     def test_x(self):
+        """Test x coord"""
         self.assertEqual(Square(10, 3).width, 10)
 
     def test_y(self):
+        """Test y coord"""
         self.assertEqual(Square(10, 3).width, 10)
 
     def test_width(self):
+        """Test width"""
         self.assertEqual(Square(10, 3).width, 10)
 
     def test_area(self):
+        """Test area"""
         r1 = Square(1, 2, 5, 4)
         self.assertEqual(r1.area(), 2)
 
@@ -107,6 +111,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1.area(), 10)
 
     # def test_output(self):
+    # """Test output"""
     #     from contextlib import redirect_stdout
     #     from io import StringIO
     #     f = StringIO()

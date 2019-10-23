@@ -21,7 +21,8 @@ class TestRectangle(unittest.TestCase):
     """
 
     def setUp(self):
-        # super(Base, self).setUp()
+        """Test setup"""
+         # super(Base, self).setUp()
         # _Rectangle._clear_inits()
         Base._clear_inits()
 
@@ -67,10 +68,12 @@ class TestRectangle(unittest.TestCase):
          to the public instance attribute id """
 
     def test_width(self):
-        # r4 = Rectangle(10, 3)
+         """Test width"""
+       # r4 = Rectangle(10, 3)
         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_height(self):
+        """Test height"""
         r1 = Rectangle(10, 3)
         self.assertEqual(r1.height, 3)
         self.assertEqual(r1.x, 0)
@@ -78,6 +81,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.id, 1)
 
     def test_nodimensions(self):
+        """Test no dimensions"""
         with self.assertRaises(ValueError) as jfk:
             Rectangle(0, None, 5, 4)
         self.assertEqual(str(jfk.exception), "width must be > 0")
@@ -93,16 +97,20 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.id, 3)
 
     def test_x(self):
-        self.assertEqual(Rectangle(10, 3).width, 10)
+        """Test x coord"""
+         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_y(self):
+         """Test y coord"""
         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_width(self):
-        self.assertEqual(Rectangle(10, 3).width, 10)
+        """Test width coord"""
+         self.assertEqual(Rectangle(10, 3).width, 10)
 
     def test_area(self):
-        r1 = Rectangle(1, 2, 5, 4)
+        """Test area coord"""
+         r1 = Rectangle(1, 2, 5, 4)
         self.assertEqual(r1.area(), 2)
 
         r2 = Rectangle(5, 2, 5, 4)
@@ -112,6 +120,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.area(), 10)
 
     # def test_output(self):
+    #    """Test x coord"""
     #     from contextlib import redirect_stdout
     #     from io import StringIO
     #     f = StringIO()
