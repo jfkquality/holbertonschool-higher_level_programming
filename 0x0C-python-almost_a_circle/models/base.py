@@ -55,7 +55,7 @@ class Base:
         """ JSON strong to file:
         writes the JSON string representation of list_objs to a file:
         """
-        #Why doesn't this work for Squares? Get Rectangle AND Square attributes!
+        # Why doesn't this work for Squares? Get Rectangle AND Square attrs!
         import json
 
         dictlist = []
@@ -71,7 +71,7 @@ class Base:
             with open(filename, mode='w') as myfile:
                 filestring = (Base.to_json_string(dictlist))
                 # filestring = (filestring.replace("_Rectangle__", ''))
-                filestring = (filestring.replace("_" + cls.__name__ + "__", ''))
+                filestring = (filestring.replace("_"+cls.__name__+"__", ''))
                 myfile.write(filestring)
                 # json.dump(filestring, myfile)
 
@@ -120,9 +120,8 @@ class Base:
         #     instlist.append(Base.create(**d))
         # return dictlist
 
+        # @classmethod
+        # def save_to_file_csv(cls, list_objs):
 
-   # @classmethod
-    # def save_to_file_csv(cls, list_objs):
-
-    # @classmethod
-    # def load_from_file_csv(cls):
+        # @classmethod
+        # def load_from_file_csv(cls):
