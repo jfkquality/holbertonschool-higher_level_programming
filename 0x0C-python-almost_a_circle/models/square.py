@@ -6,8 +6,8 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """Square subclass of Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
-        # super().__init__(id=id, x=x, y=y, width= size, height=size)
-        super().__init__(size, size, x, y, id)
+        super().__init__(id=id, x=x, y=y, width=size, height=size)
+        # super().__init__(width, height, x, y, id)
         # self.__size = size
         self.size = size
         self.x = x

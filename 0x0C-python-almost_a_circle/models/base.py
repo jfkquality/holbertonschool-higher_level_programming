@@ -52,29 +52,32 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Save to file
+        """ JSON strong to file:
+        writes the JSON string representation of list_objs to a file:
         """
+        #Why doesn't this work for Squares? Get Rectangle AND Square attributes!
         import json
 
-        emptylist = []
+        dictlist = []
         filename = cls.__name__ + ".json"
 
         if not list_objs:
-            with open(filename, mode='w', encoding="utf-8") as myfile:
-                emptylist = (Base.to_json_string(emptylist))
-                myfile.write(emptylist)
+            with open(filename, mode='w') as myfile:
+                dictlist = (Base.to_json_string(dictlist))
+                myfile.write(dictlist)
         else:
-            dictlist = []
             for i, obj in enumerate(list_objs):
                 dictlist.append(vars(obj))
-                with open(filename, mode='w', encoding="utf-8") as myfile:
-                    filestring = (Base.to_json_string(dictlist))
-                    filestring = (filestring.replace('_Rectangle__', ''))
-                    myfile.write(filestring)
+            with open(filename, mode='w') as myfile:
+                filestring = (Base.to_json_string(dictlist))
+                # filestring = (filestring.replace("_Rectangle__", ''))
+                filestring = (filestring.replace("_" + cls.__name__ + "__", ''))
+                myfile.write(filestring)
+                # json.dump(filestring, myfile)
 
     @staticmethod
     def from_json_string(json_string):
-        """ returns the list of the JSON string representation """
+        """ JSON string list of dicts. return to list of json strings. """
         import json
 
         if not json_string:
@@ -85,11 +88,41 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set:"""
-        dummy = cls(width=1, height=1, x=0, y=0)
-        dummy.update(**dictionary)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(width=1, height=1, x=0, y=0)
+        else:
+            dummy = cls(size=1, x=0, y=0)
+            dummy.update(**dictionary)
         return dummy
 
     @classmethod
     def load_from_file(cls):
-        """returns a list of instances"""
+        """File to instances: returns a list of instances"""
+
+        import json
+
+        dictlist = []
+        instlist = []
         filename = cls.__name__ + ".json"
+        with open(filename, mode='r', encoding="utf-8") as f:
+            jsondict = json.load(f)
+
+        for obj in jsondict:
+            instlist.append(cls.create(**obj))
+
+        return instlist
+
+        #     for jsonstr in f:
+        #         print(type(jsonstr), jsonstr)
+        #         dictlist.append(Base.from_json_string(jsonstr))
+        # for d in dictlist:
+        #     print(type(d), d)
+        #     instlist.append(Base.create(**d))
+        # return dictlist
+
+
+   # @classmethod
+    # def save_to_file_csv(cls, list_objs):
+
+    # @classmethod
+    # def load_from_file_csv(cls):
