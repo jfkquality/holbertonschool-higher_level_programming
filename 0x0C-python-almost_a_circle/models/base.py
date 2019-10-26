@@ -70,8 +70,9 @@ class Base:
                 dictlist.append(vars(obj))
             with open(filename, mode='w') as myfile:
                 filestring = (Base.to_json_string(dictlist))
-                # filestring = (filestring.replace("_Rectangle__", ''))
-                filestring = (filestring.replace("_"+cls.__name__+"__", ''))
+                filestring = (filestring.replace("_Rectangle__", ''))
+                filestring = (filestring.replace("_Square__", ''))
+                # filestring = (filestring.replace("_"+cls.__name__+"__", ''))
                 myfile.write(filestring)
                 # json.dump(filestring, myfile)
 
