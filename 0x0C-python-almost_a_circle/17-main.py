@@ -20,3 +20,5 @@ if __name__ == "__main__":
     print(r2)
     print(r1 is r2)
     print(r1 == r2)
+
+    print(Rectangle.create(**{ 'width': 2, 'height': 3 }))

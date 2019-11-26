@@ -9,11 +9,13 @@ def text_indentation(text):
     dot = 0
     colon = 0
     position = 0
+    # delims = ":?."
 
     if not isinstance(text, (str)):
         raise TypeError("text must be a string")
 
     while (position != len(text) and start != len(text) + 2):
+        # for delim in delims: #Refactor using delimms, like Gary's
         question = text.find('?', start)
         if question == -1:
             question = len(text)
