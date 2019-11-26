@@ -1,2 +1,2 @@
 -- 6.list all in table. Describe.
-DESCRIBE first_table
+SELECT * FROM first_table
