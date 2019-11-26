@@ -9,4 +9,3 @@ def pascal_triangle(n):
             newrow.append(item + 1)
         triangle.append(newrow)
     return(triangle)
-
