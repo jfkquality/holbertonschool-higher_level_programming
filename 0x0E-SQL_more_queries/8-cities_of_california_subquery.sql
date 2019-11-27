@@ -8,5 +8,5 @@ SELECT c.id, c.name
 FROM cities AS c
 INNER JOIN states AS s
 ON c.state_id = s.id
-WHERE s.name = CALIFORNIA
+WHERE s.name = 'California'
 ORDER BY c.id ASC
