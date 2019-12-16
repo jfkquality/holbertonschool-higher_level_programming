@@ -13,10 +13,10 @@ if __name__ == "__main__":
                          passwd=mypwd,
                          db=mydb)
 
-    cur=db.cursor()
+    cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY id")
     for id, name in cur.fetchall():
-        print ("({}, '{}')".format(id, name))
+        print("({}, '{}')".format(id, name))
 
     db.close
