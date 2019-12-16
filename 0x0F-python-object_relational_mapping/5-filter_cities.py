@@ -8,6 +8,7 @@ if __name__ == "__main__":
     myuser = argv[1]
     mypwd = argv[2]
     mydb = argv[3]
+    statesearch = argv[4]
 
     db = MySQLdb.connect(host="localhost",
                          port=3306,
@@ -18,13 +19,18 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     sql = "SELECT c.id, c.name, s.name \
-      FROM states AS s \
-      INNER JOIN cities as c ON s.id = c.state_id"
+      FROM cities AS c \
+      INNER JOIN states as s ON c.state_id = s.id \
+      ORDER BY c.id"
 
     cur.execute(sql)
 
-    for row in cur.fetchall():
-        print(row)
+    # for id, cname, sname in cur.fetchall():
+    #     if sname == statesearch:
+    #         print(cname, end=(', '))
+    #         print("{}".format(cname, sep = ','))
+    print(', '.join(cname for id, cname, sname in cur.fetchall()
+                    if sname == statesearch))
 
     cur.close()
     db.close()
