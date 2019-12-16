@@ -19,4 +19,5 @@ if __name__ == "__main__":
     for id, name in cur.fetchall():
         print("({}, '{}')".format(id, name))
 
-    db.close
+    cur.close()
+    db.close()
