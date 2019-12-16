@@ -5,12 +5,9 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    # if len(argv) > 4:
-    #     exit(1)
     myuser = argv[1]
     mypwd = argv[2]
     mydb = argv[3]
-    statesearch = argv[4]
 
     db = MySQLdb.connect(host="localhost",
                          port=3306,
@@ -19,13 +16,17 @@ if __name__ == "__main__":
                          db=mydb)
 
     cur = db.cursor()
-    sql = "SELECT * FROM states ORDER BY id ASC"
+
+    sql = "SELECT c.id, c.name, s.name \
+      FROM states AS s \
+      INNER JOIN cities as c ON s.id = c.state_id"
 
     cur.execute(sql)
 
-    for id, name in cur.fetchall():
-        if name == statesearch:
-            print("({}, '{}')".format(id, name))
+    for row in cur.fetchall():
+        # if name == statesearch:
+        print(row)
+        # print("({}, '{}', '{}')".format(id, name, name))
 
     cur.close()
     db.close()

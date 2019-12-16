@@ -17,8 +17,9 @@ if __name__ == "__main__":
                          db=mydb)
 
     cur = db.cursor()
+    sql = "SELECT * FROM states ORDER BY id ASC"
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute(sql)
 
     for id, name in cur.fetchall():
         if name == statesearch:

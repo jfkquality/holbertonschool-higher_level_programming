@@ -16,10 +16,13 @@ if __name__ == "__main__":
                          db=mydb)
 
     cur = db.cursor()
+    sql = "SELECT * FROM states ORDER BY id ASC"
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    for id, name in cur.fetchall():
-        print("({}, '{}')".format(id, name))
+    cur.execute(sql)
+    for row in cur.fetchall():
+        print(row)
+    # for id, name in cur.fetchall():
+    #     print("({}, '{}')".format(id, name))
 
     cur.close()
     db.close()
