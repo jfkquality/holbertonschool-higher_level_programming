@@ -5,8 +5,8 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    if len(argv) > 4:
-        exit(1)
+    # if len(argv) > 4:
+    #     exit(1)
     myuser = argv[1]
     mypwd = argv[2]
     mydb = argv[3]
