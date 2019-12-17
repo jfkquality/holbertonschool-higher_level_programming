@@ -7,7 +7,7 @@ import SQLAlchemy
 from SQLAlchemy import create_engine
 from SQLAlchemy.ext.declarative import declarative_base
 from SQLAlchemy import Column, Integer, String
-# """ Import sqlalchemy module """
+""" Import sqlalchemy module """
 
 Base = declarative_base()
 """ Base module """
