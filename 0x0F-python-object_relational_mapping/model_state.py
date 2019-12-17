@@ -10,8 +10,8 @@ from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 # """ Base module """
 # connect to server
-engine = create_engine('mysql://root:jknight121@localhost:3306')
-Base.metadata.create_all(engine)
+# engine = create_engine('mysql://root:jknight121@localhost:3306')
+# Base.metadata.create_all(engine)
 
 
 class State(Base):
