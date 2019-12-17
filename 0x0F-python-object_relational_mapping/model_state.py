@@ -8,9 +8,6 @@ from SQLAlchemy import Column, Integer, String
 
 Base = declarative_base()
 
-# connect to server
-engine = create_engine('mysql://root:jknight121@localhost:3306')
-Base.metadata.create_all(engine)
 
 
 class State(Base):
