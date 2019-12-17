@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ Base Class
 """
-import sqlalchemy
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
+import SQLAlchemy
+from SQLAlchemy import create_engine
+from SQLAlchemy.ext.declarative import declarative_base
+from SQLAlchemy import Column, Integer, String
 
 Base = declarative_base()
 
