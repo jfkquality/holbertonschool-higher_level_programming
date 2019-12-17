@@ -12,6 +12,7 @@ Base = declarative_base()
 engine = create_engine('mysql://root:jknight121@localhost:3306')
 Base.metadata.create_all(engine)
 
+
 class State(Base):
     """State subclass of Base"""
     __tablename__ = 'states'
