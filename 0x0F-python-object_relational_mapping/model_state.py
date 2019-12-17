@@ -16,7 +16,7 @@ Base.metadata.create_all(engine)
 class State(Base):
     """State subclass of Base"""
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False, unique=True)
     name = Column(String(128), nullable=False)
 
 # Duplicate for cities
