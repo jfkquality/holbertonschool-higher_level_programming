@@ -25,10 +25,6 @@ if __name__ == "__main__":
 
     cur.execute(sql)
 
-    # for id, cname, sname in cur.fetchall():
-    #     if sname == statesearch:
-    #         print(cname, end=(', '))
-    #         print("{}".format(cname, sep = ','))
     print(', '.join(cname for id, cname, sname in cur.fetchall()
                     if sname == statesearch))
 
