@@ -7,7 +7,7 @@ from SQLAlchemy.ext.declarative import declarative_base
 from SQLAlchemy import Column, Integer, String
 
 Base = declarative_base()
-
+""" Base module """
 
 
 class State(Base):
