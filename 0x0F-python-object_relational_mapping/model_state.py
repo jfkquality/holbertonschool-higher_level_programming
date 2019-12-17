@@ -4,8 +4,8 @@
 
 # import SQLAlchemy
 # from SQLAlchemy import create_engine
-from SQLAlchemy.ext.declarative import declarative_base
-from SQLAlchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
 """ Import sqlalchemy module """
 
 Base = declarative_base()
