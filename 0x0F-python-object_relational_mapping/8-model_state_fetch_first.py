@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all State objects from the database hbtn_0e_6_usa
+""" prints the first State object from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -13,12 +13,8 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
+    try:
+        state = session.query(State).first()
         print("{}: {}".format(state.id, state.name))
-
-    # result = engine.execute('SELECT * FROM states ORDER BY id')
-    # rows = result.fetchall()
-    # print(rows)
-
-    # for row in rows:
-    #     print(row)
+    except NoResultFouind:
+        print('Nothing')
