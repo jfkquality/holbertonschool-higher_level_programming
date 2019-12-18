@@ -16,5 +16,5 @@ if __name__ == "__main__":
     try:
         state = session.query(State).first()
         print("{}: {}".format(state.id, state.name))
-    except NoResultFouind:
+    except:
         print('Nothing')
