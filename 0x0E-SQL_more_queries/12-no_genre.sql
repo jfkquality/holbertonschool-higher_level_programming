@@ -3,9 +3,16 @@
 -- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 -- You can use only one SELECT statement
 -- WHERE tv.id NOT IN tvsg
+
+-- SELECT tv.title
+-- FROM tv_shows AS tv
+-- WHERE tv.id NOT IN (
+-- SELECT tvsg.show_id
+-- FROM tv_show_genres AS tvsg)
+
 SELECT tv.title, tvsg.genre_id
 FROM tv_shows AS tv
-INNER JOIN tv_show_genres AS tvsg
+LEFT JOIN tv_show_genres AS tvsg
 ON tv.id = tvsg.show_id
 WHERE tvsg.show_id IS NULL
 ORDER BY tv.title ASC, tvsg.genre_id ASC
