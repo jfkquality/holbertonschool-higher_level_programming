@@ -6,6 +6,10 @@
 -- The database name will be passed as an argument of the mysql command
 SELECT c.id, c.name
 FROM cities AS c
+WHERE states_id in
+      SELECT if from states where name = 'California'
+
+-- Don't need JOIN; can use subquery (complete above. See Gary's)
 INNER JOIN states AS s
 ON c.state_id = s.id
 WHERE s.name = 'California'
