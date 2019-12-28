@@ -6,7 +6,7 @@
 -- Results must be sorted in descending order by the number of shows linked
 -- You can use only one SELECT statement
 
-SELECT g.name as "genre", count(tvsg.genre_id) as "number_of_shows"
+SELECT g.name AS "genre", count(tvsg.genre_id) AS "number_of_shows"
 FROM tv_genres AS g
 INNER JOIN tv_show_genres AS tvsg
 ON g.id = tvsg.genre_id
