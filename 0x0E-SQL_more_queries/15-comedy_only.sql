@@ -5,7 +5,7 @@
 -- You can use only one SELECT statement
 
 SELECT s.title
-FROM tv_shows as s
+FROM tv_shows AS s
 INNER JOIN tv_show_genres AS tvsg
 ON s.id = tvsg.show_id
 INNER JOIN tv_genres AS g
