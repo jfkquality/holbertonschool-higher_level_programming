@@ -4,7 +4,7 @@
 -- Results must be sorted in ascending order by the show title
 -- You can use only one SELECT statement
 
-SELECT s.title
+SELECT tv.title
 FROM tv_shows AS tv
 INNER JOIN tv_show_genres AS tvsg
 ON tv.id = tvsg.show_id
