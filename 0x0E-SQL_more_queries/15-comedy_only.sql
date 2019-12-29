@@ -5,10 +5,10 @@
 -- You can use only one SELECT statement
 
 SELECT s.title
-FROM tv_shows AS s
+FROM tv_shows AS tv
 INNER JOIN tv_show_genres AS tvsg
-ON s.id = tvsg.show_id
+ON tv.id = tvsg.show_id
 INNER JOIN tv_genres AS g
 ON g.id = tvsg.genre_id
 WHERE g.name = "Comedy"
-ORDER BY s.title ASC
+ORDER BY tv.title ASC

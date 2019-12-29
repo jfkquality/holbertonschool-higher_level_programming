@@ -8,7 +8,7 @@ SELECT g.name
 FROM tv_genres AS g
 INNER JOIN tv_show_genres AS tvsg
 ON g.id = tvsg.genre_id
-INNER JOIN tv_shows AS s
-ON s.id = tvsg.show_id
-WHERE s.title = "Dexter"
+INNER JOIN tv_shows AS tv
+ON tv.id = tvsg.show_id
+WHERE tv.title = "Dexter"
 ORDER BY g.name ASC
