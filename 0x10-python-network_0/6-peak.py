@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Find peak of a list of integers """
+
+
 def find_peak(intlist):
     if not intlist:
         return ("None")
