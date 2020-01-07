@@ -3,6 +3,7 @@
 
 
 def find_peak(intlist):
+    """ find peak function """
     if not intlist:
         return ("None")
     peak = intlist[0]
