@@ -7,10 +7,10 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
-    values = {'mailto': email}
-    data = parse.urlencode(values)
-    data = data.encode('ascii')
-    req = request.Request(url, data)
+    email = {'email': argv[2]}
+    email = parse.urlencode(email)
+    email = data.encode('ascii')
+    req = request.Request(url, email)
     with request.urlopen(req) as response:
         headers = response.info().items()
         html = response.read()
