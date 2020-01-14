@@ -5,5 +5,5 @@ from sys import argv
 
 url = argv[1]
 email = argv[2]
-r = requests.post(url, email=email)
-print("Your email is: {}".format(r.text))
+r = requests.post(url, data=email)
+print(r.text)
