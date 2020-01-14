@@ -10,7 +10,7 @@ if __name__ == "__main__":
     else:
         q = argv[1]
     q = {'letter': argv[1]}
-    r = requests.post(url, data = q)
+    r = requests.post(url, data=q)
     if r.headers['Content-Type'] = 'application/json':
         print("[{}], {}".format(r.id, r.name))
     elif not r.headers:
