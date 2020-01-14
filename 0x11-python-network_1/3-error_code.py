@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# take in URL and email, send a POST req with email as param, display body of the response (decoded in utf-8)
+# take in URL and email, send a POST req with email as param, display resp/utf8
 from urllib import request
 from urllib import parse
 from urllib import error
