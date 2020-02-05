@@ -2,7 +2,7 @@
 if (parseInt(process.argv[2])) {
   let i = parseInt(process.argv[2]);
   const j = i;
-  const x = 'x';
+  const x = 'X';
   while (i > 0) {
     console.log(x.repeat(j));
     i--;
