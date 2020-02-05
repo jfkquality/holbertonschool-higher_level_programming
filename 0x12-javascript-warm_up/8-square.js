@@ -2,8 +2,8 @@
 // if (Number.isInteger(process.argv[2])) {
 if (parseInt(process.argv[2])) {
   let i = process.argv[2];
-  let j = i;
-  let x = 'x';
+  const j = i;
+  const x = 'x';
   while (i > 0) {
     console.log(x.repeat(j));
     i--;
