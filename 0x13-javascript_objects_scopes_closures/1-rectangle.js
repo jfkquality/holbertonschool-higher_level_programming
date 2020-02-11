@@ -1,6 +1,6 @@
 #!/usr/bin/node
-class Rectangle { // eslint-disable-line no-unused-vars
-  constructor (h, w) {
+module.exports = class Rectangle {
+  constructor (w, h) {
     this.height = h;
     this.width = w;
   }
