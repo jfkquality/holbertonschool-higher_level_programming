@@ -31,13 +31,13 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    // this.chr = c;
+    this.chr = c;
     if (typeof c === 'undefined') {
-      // this.chr = 'X';
-      c = 'X'
+      this.chr = 'X';
+      // c = 'X'
     }
     for (let i = 0; i < this.width; i++) {
-      console.log(c.repeat(this.width));
+      console.log(this.chr.repeat(this.width));
     }
   }
 };
