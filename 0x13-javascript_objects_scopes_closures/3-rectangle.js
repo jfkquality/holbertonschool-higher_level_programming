@@ -5,9 +5,9 @@ class Rectangle {
       this.width = w;
       this.height = h;
     }
-    this.print = function() {
+    this.print = function () {
       for (let i = 0; i < h; i++) {
-	console.log('X'.repeat(w));
+        console.log('X'.repeat(w));
       }
     };
   }
