@@ -14,15 +14,14 @@ class Rectangle {
   }
 
   double () {
-    for (let j = 0; j < this.height * 2; j++) {
-      console.log('X'.repeat(this.width * 2));
-    }
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
 
   rotate () {
-    for (let k = 0; k < this.width * 2; k++) {
-      console.log('X'.repeat(this.height * 2));
-    }
+    let temp = this.width;
+    this.width = this.height;
+    this.height = temp;;
   }
 }
 
