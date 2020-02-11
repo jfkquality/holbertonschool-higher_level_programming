@@ -29,7 +29,8 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-  charPrint(c) {
+
+  charPrint (c) {
     this.chr = c;
     if (!this.chr) {
       this.chr = 'X';
