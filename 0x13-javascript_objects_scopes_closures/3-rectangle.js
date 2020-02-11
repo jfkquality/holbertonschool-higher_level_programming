@@ -6,8 +6,9 @@ class Rectangle {
       this.height = h;
     }
     this.print = function () {
+      const ex = 'X';
       for (let i = 0; i < this.height; i++) {
-        console.log('X'.repeat(this.width));
+        console.log(ex.repeat(this.width));
       }
     };
   }
