@@ -6,5 +6,4 @@ request(url, function (error, response, body) {
   if (error) throw (error);
   const film = JSON.parse(body);
   console.log(film.title);
-  console.log(film.characters)
 });
