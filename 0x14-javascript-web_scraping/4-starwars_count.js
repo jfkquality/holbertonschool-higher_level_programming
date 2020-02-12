@@ -7,7 +7,6 @@ request(url, function (error, response, body) {
   const res = JSON.parse(body);
   const films = res.results;
   const wedge = 'https://swapi.co/api/people/18/';
-  console.log(wedge);
   let count = 0;
   for (const film in films) {
     const characters = films[film].characters;
