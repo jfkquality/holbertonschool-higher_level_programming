@@ -8,13 +8,18 @@ request(url, function (error, response, body) {
   const films = res.results;
   const wedge = 'https://swapi.co/api/people/18/';
   let count = 0;
-  for (const film of films) {
-    const characters = film.characters;
-    for (const character of characters) {
-      if (character.includes(wedge)) {
-        count++;
-      }
+  films.forEach(function (film, index, arr) {
+    if (film.characters.indexOf(wedge) >= 0) {
+      count++;
     }
-  }
+  });
+  // for (const film of films) {
+  //   const characters = film.characters;
+  //   for (const character of characters) {
+  //     if (character.includes(wedge)) {
+  //       count++;
+  //     }
+  //   }
+  // }
   console.log(count);
 });
