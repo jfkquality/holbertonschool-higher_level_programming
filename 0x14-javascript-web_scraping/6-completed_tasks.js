@@ -4,18 +4,18 @@ const url = process.argv[2];
 
 request(url, function (error, response, body) {
   if (error) throw (error);
-  const res = JSON.parse(body);
-  console.log(res);
-  // const films = res.results;
-  // const wedge = 'https://swapi.co/api/people/18/';
-  // let count = 0;
-  // for (const film in films) {
-  //   const characters = films[film].characters;
-  //   for (const character in characters) {
-  //     if (characters[character].includes(wedge)) {
-  //       count++;
-  //     }
-  //   }
-  // }
-  // console.log(count);
+  const todos = JSON.parse(body);
+
+  let results = {};
+
+  todos.forEach(function (todo, index, arr) {
+    if (!results[todo.userId]) {
+      console.log("First userId: " + todo.userId);
+      results[todo.userId] = 1;
+    } else {
+      console.log('Increment userId: ' + todo.userId + ' count ' + results[todo.userId]);
+      results[todo.userId] += 1;
+    }
+  });
+  console.log(results);
 });
