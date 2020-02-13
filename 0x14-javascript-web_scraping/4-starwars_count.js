@@ -15,6 +15,8 @@ request(url, function (error, response, body) {
       }
     });
   });
+
+  // *** Alternate method. Fails checker. ?? ***
   // for (const film of films) {
   //   const characters = film.characters;
   //   for (const character of characters) {
