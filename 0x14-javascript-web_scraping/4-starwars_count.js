@@ -8,10 +8,10 @@ request(url, function (error, response, body) {
   const films = res.results;
   const wedge = 'https://swapi.co/api/people/18/';
   let count = 0;
-  for (const film in films) {
-    const characters = films[film].characters;
-    for (const character in characters) {
-      if (characters[character].includes(wedge)) {
+  for (const film of films) {
+    const characters = film.characters;
+    for (const character of characters) {
+      if (character.includes(wedge)) {
         count++;
       }
     }
