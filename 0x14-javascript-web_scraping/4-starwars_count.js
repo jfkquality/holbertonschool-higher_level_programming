@@ -6,12 +6,12 @@ request(url, function (error, response, body) {
   if (error) throw (error);
   const res = JSON.parse(body);
   const films = res.results;
-  const wedge = 'https://swapi.co/api/people/18/';
+  // const wedge = 'https://swapi.co/api/people/18/';
   let count = 0;
   films.forEach(function (film, index, arr) {
     film.characters.forEach(function (character, idx, arr2) {
       if (character.indexOf('/18/') >= 0) {
-	count++;
+        count++;
       }
     });
   });
