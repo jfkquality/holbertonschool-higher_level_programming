@@ -9,9 +9,11 @@ request(url, function (error, response, body) {
   const wedge = 'https://swapi.co/api/people/18/';
   let count = 0;
   films.forEach(function (film, index, arr) {
-    if (film.characters.indexOf(wedge) >= 0) {
-      count++;
-    }
+    film.characters.forEach(function (character, idx, arr2) {
+      if (character.indexOf('/18/') >= 0) {
+	count++;
+      }
+    });
   });
   // for (const film of films) {
   //   const characters = film.characters;
