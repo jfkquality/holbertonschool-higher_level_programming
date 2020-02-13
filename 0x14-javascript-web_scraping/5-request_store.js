@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const fs = require('fs');
-const Request = require('request')
+const Request = require('request');
 const url = process.argv[2];
 const fn = process.argv[3];
 
