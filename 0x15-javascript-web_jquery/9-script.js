@@ -1,4 +1,4 @@
-$( document ).ready(function () {
+$(document).ready(function () {
   const $hello = $('DIV#hello');
   $.ajax({
     type: 'GET',
