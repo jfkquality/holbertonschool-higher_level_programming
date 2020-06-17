@@ -7,7 +7,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *head = list;
 	listint_t *current = head;
-	while (current->next)
+	while (current)
 	{
 		if (current->next == head)
 			return (1);
